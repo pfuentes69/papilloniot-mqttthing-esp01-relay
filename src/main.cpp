@@ -123,7 +123,7 @@ void notificarBroker(bool OnOff) {
 
   Serial.println(payload);
  
-  client.publish("PapillonIoT/Lamp1/status", (char*) payload.c_str());
+  client.publish("PapillonIoT/Outlet1/status", (char*) payload.c_str());
 
 }
 
@@ -149,11 +149,11 @@ void controlRelay (bool OnOff)
 {
   if (OnOff) {
     Serial.println("Encender Relay");
-    digitalWrite(relayPin, HIGH);   // turn the RELAY on (HIGH is the voltage level)    
+    digitalWrite(relayPin, LOW);   // turn the RELAY on (HIGH is the voltage level)    
   } 
   else {
     Serial.println("Apagar Relay");
-    digitalWrite(relayPin, LOW);   // turn the RELAY off (LOW is the voltage level)
+    digitalWrite(relayPin, HIGH);   // turn the RELAY off (LOW is the voltage level)
   }
 }
 
