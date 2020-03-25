@@ -183,7 +183,7 @@ void controlEnchufe (bool OnOff)
 
 void setup() {
   // initialize serial for debugging
-  Serial.begin(115200);
+  Serial.begin(19200);
   Serial.println("<<<<< SETUP START >>>>>");
   // initialize WiFi
   WiFi.mode(WIFI_STA);
